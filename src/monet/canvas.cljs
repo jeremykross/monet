@@ -325,6 +325,7 @@
   (.getAttribute e a))
 
 (defn draw-loop [{:keys [canvas updating? ctx active entities] :as mc}]
+  (.log js/console "Hello")
   (clear-rect ctx {:x 0 :y 0 :w (attr canvas "width") :h (attr canvas "height")})
   (when @active
     (let [ks (js-keys entities)
